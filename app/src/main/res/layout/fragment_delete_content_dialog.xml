@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.DeleteContentDialogFragment">
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:maxLines="2"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"
+            android:textStyle="normal"
+            android:textAlignment="center"
+            android:text="@string/are_you_sure_you_want_to_delete_the_post"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/delete"
+            style="@style/close"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/delete"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/goBack"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            style="@style/back"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/go_back"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

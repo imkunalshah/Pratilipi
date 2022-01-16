@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.MainActivity"
+    android:orientation="vertical"
+    android:id="@+id/root">
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="21dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginEnd="10dp"
+                app:tint="#d0021b"
+                android:src="@drawable/ic_pratilipi"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:textFontWeight="500"
+                android:textStyle="normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textSize="20sp"
+                android:textColor="#4C5454"
+                android:textAllCaps="false"
+                android:text="@string/app_name"
+                tools:targetApi="p" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="4dp"
+        app:cardCornerRadius="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                app:tint="#d0021b"
+                android:padding="10dp"
+                android:src="@drawable/ic_search"
+                android:layout_weight="0.15"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+            <EditText
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:textAlignment="gravity"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:hint="Search"
+                android:background="@android:color/transparent"
+                android:layout_weight="0.85"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <RelativeLayout
+        android:background="#F7F6F3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/newPost"
+            app:fabSize="auto"
+            app:borderWidth="1dp"
+            app:backgroundTint="@color/white"
+            android:backgroundTint="#d0021b"
+            app:tint="@color/white"
+            android:src="@drawable/ic_newpost"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</LinearLayout>

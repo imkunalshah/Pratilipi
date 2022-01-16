@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/quit_lbl"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:textStyle="normal"
+            android:maxLines="2"
+            android:text="@string/are_you_sure_you_want_to_quit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_marginTop="5dp"
+            android:id="@+id/animation"
+            app:lottie_rawRes="@raw/quit"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"
+            android:layout_below="@+id/quit_lbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/back"
+            style="@style/close"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/animation"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/take_me_back"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/exit"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/back"
+            style="@style/back"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/quit_app"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>
