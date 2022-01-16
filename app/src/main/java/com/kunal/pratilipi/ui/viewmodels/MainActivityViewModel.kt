@@ -2,13 +2,11 @@ package com.kunal.pratilipi.ui.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.kunal.pratilipi.Content
-import com.kunal.pratilipi.ContentRepository
+import com.kunal.pratilipi.data.models.Content
+import com.kunal.pratilipi.data.repository.ContentRepository
 import com.kunal.pratilipi.utils.*
 import dagger.hilt.android.lifecycle.HiltViewModel
 import org.greenrobot.eventbus.EventBus
-import java.lang.Exception
-import java.util.ArrayList
 import javax.inject.Inject
 
 @HiltViewModel

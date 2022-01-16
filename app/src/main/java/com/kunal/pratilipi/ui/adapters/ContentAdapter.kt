@@ -1,6 +1,10 @@
 package com.kunal.pratilipi.ui.adapters
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
+import android.os.Bundle
+import android.os.Vibrator
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,15 +15,10 @@ import androidx.cardview.widget.CardView
 import androidx.core.view.isVisible
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
-import com.kunal.pratilipi.Content
+import com.kunal.pratilipi.data.models.Content
+import com.kunal.pratilipi.R
 import com.kunal.pratilipi.ui.fragments.DeleteContentDialogFragment
 import com.kunal.pratilipi.ui.fragments.EditContentBottomSheetDialogFragment
-import com.kunal.pratilipi.R
-import android.content.Intent
-import android.net.Uri
-import android.os.Bundle
-import android.os.Vibrator
-import java.io.Serializable
 
 
 class ContentAdapter(
@@ -68,7 +67,6 @@ class ContentAdapter(
                 val editDialog = EditContentBottomSheetDialogFragment(object : EditContentBottomSheetDialogFragment.OnEditContentListener {
                     override fun onEdited(content: Content) {
                         listener.onEdit(content)
-                        contentList[adapterPosition] = content
                         notifyDataSetChanged()
                     }
 
@@ -117,4 +115,10 @@ class ContentAdapter(
     }
 
     override fun getItemCount(): Int = contentList.size
+
+    fun updateContent(list:MutableList<Content>){
+        contentList.clear()
+        contentList.addAll(list)
+        notifyDataSetChanged()
+    }
 }

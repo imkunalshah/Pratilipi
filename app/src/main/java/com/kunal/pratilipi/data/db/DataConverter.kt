@@ -1,8 +1,9 @@
-package com.kunal.pratilipi
+package com.kunal.pratilipi.data.db
 
 import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.kunal.pratilipi.data.models.Content
 import java.lang.reflect.Type
 
 

@@ -1,4 +1,4 @@
-package com.kunal.pratilipi
+package com.kunal.pratilipi.data.models
 
 import android.net.Uri
 import androidx.room.Entity

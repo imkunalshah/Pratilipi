@@ -2,30 +2,24 @@ package com.kunal.pratilipi.ui.fragments
 
 import android.Manifest
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.provider.MediaStore
 import android.util.DisplayMetrics
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
-import java.io.ByteArrayOutputStream
 import java.util.*
 import android.annotation.SuppressLint
 import android.widget.*
 import com.deishelon.roundedbottomsheet.RoundedBottomSheetDialogFragment
-import com.kunal.pratilipi.Content
+import com.kunal.pratilipi.data.models.Content
 import com.kunal.pratilipi.R
-import com.kunal.pratilipi.utils.snackBar
 import com.kunal.pratilipi.utils.toast
-import kotlinx.android.synthetic.main.layout_content.*
 import java.lang.StringBuilder
 
 
@@ -34,7 +28,7 @@ class NewPostBottomSheetDialogFragment(
 ) : RoundedBottomSheetDialogFragment() {
 
     interface OnNewPostListener{
-        fun onSave(content:Content)
+        fun onSave(content: Content)
     }
 lateinit var addImage:LinearLayout
 lateinit var postButton:LinearLayout

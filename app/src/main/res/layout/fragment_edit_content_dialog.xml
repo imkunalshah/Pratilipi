@@ -42,6 +42,19 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
+                <TextView
+                    android:textSize="24sp"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="0dp"
+                    android:textAlignment="gravity"
+                    android:gravity="center_vertical"
+                    android:text="@string/title"
+                    android:textColor="#d0021b"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
                 <EditText
                     android:id="@+id/titleET"
                     android:layout_marginStart="10dp"
@@ -59,10 +72,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"/>
 
+                <TextView
+                    android:textSize="24sp"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="0dp"
+                    android:textAlignment="gravity"
+                    android:gravity="center_vertical"
+                    android:text="@string/description"
+                    android:textColor="#d0021b"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
                 <EditText
                     android:id="@+id/contentET"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"

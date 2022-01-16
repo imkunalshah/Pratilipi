@@ -17,14 +17,14 @@ import android.widget.*
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.DialogFragment
 import com.deishelon.roundedbottomsheet.RoundedBottomSheetDialogFragment
-import com.kunal.pratilipi.Content
+import com.kunal.pratilipi.data.models.Content
 import com.kunal.pratilipi.R
 import com.kunal.pratilipi.utils.toast
 import java.util.HashMap
 
 
 class EditContentBottomSheetDialogFragment(
-    val listener: OnEditContentListener
+    private val listener: OnEditContentListener
 ) : RoundedBottomSheetDialogFragment() {
 
 
@@ -46,7 +46,7 @@ class EditContentBottomSheetDialogFragment(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_new_post_bottom_sheet_dialog, container, false)
+        return inflater.inflate(R.layout.fragment_edit_content_dialog, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -68,7 +68,7 @@ class EditContentBottomSheetDialogFragment(
         postButton = view.findViewById(R.id.postButton)
 
         val bundle = arguments
-        val content:Content = bundle?.getSerializable("content") as Content
+        val content: Content = bundle?.getSerializable("content") as Content
         titleET.setText(content.title)
         descET.setText(content.description)
         imageUri = Uri.parse(content.image)
@@ -111,7 +111,6 @@ class EditContentBottomSheetDialogFragment(
         postButton.setOnClickListener {
             val title = titleET.text.toString()
             val desc = descET.text.toString()
-            val postId =
             if (title.isNullOrEmpty() || title.isNullOrBlank()){
                 context?.toast("Title is required")
             }
